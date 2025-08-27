@@ -1,0 +1,26 @@
+<section class="infoUsuario">
+
+</section>
+
+
+<section class="infoAPI">
+
+        <p>Consulte la información obtenida</p>
+        <h2>Eliga un serie / año </h2>
+        <select [(ngModel)]="serieSeleccionada" (change)="onSerieChange()">
+            <option *ngFor="let serie of series" [value]="serie.mal_id"> 
+                {{serie.title}}
+            </option>
+        </select>
+
+        <h2 *ngIf="capituloDisponible.length > 0"> Eliga un capitulo / periodo </h2>
+        <select *ngIf="capituloDisponible.length > 0" [(ngModel)] ="capituloSeleccionado">
+            <option *ngFor="let capitulo of capituloDisponible" [value]="capitulo.mal_id"> 
+                {{capitulo.title}}
+            </option>
+        </select>
+
+
+
+         <button class="btn-basic" (click)="filtroSeriesYCapitulos()">Descargar</button>
+</section>

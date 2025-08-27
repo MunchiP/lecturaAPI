@@ -1,0 +1,23 @@
+.label {
+  font-size: 14px;
+  margin: 0 16px 0 8px;
+  min-width: 120px;
+}
+
+.btn-basic{
+    height: 50px;
+    width: 130px;
+    border-radius: 25px;
+    background-color: rgb(127, 182, 255);
+    font-size: 15px;
+    border: none;
+}
+
+
+.btn-basic:hover {
+    transition: 0.4s;
+    cursor: pointer;
+    height: 52px;
+    width: 132px;
+    box-shadow: 5px 5px 5px slategrey;
+}
